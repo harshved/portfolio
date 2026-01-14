@@ -494,7 +494,7 @@ input.addEventListener('keypress', function (e) {
         const cmd = this.value.toLowerCase().trim();
         this.value = '';
         printLine(`➜ ~ ${cmd}`, 'white');
-        processCommand(cmd);
+        handleCommand(cmd);
     }
 });
 
@@ -506,30 +506,101 @@ function printLine(text, color = '#22c55e') {
     output.scrollTop = output.scrollHeight;
 }
 
-function processCommand(cmd) {
-    switch (cmd) {
-        case 'help':
-            printLine('Available commands: help, whoami, skills, contact, clear, exit');
-            break;
-        case 'whoami':
-            printLine('Harsh Ved. Architect. Hacker. Builder.');
-            break;
-        case 'skills':
-            printLine('Loaded Modules: React, Python, AWS, Docker, Security Analysis.');
-            break;
-        case 'contact':
-            printLine('Opening mail client...');
-            window.location.href = "mailto:harshved3@gmail.com";
-            break;
-        case 'clear':
-            output.innerHTML = '';
-            break;
-        case 'exit':
-            modal.classList.add('hidden');
-            break;
-        default:
-            printLine(`Command not found: ${cmd}. Try 'help'.`, 'red');
+// TERMINAL LOGIC
+const commands = {
+    help: "Available commands: <span class='cmd-list'>about, experience, projects, skills, education, contact, date, clear, whoami, sudo</span>",
+    
+    about: "Name: Harsh Ved<br>System Architect | Full Stack Developer | Cybersecurity Analyst | Cloud Architect<br>Status: 🟢 Available for Hire<br>Bio: Building secure, scalable systems from high-frequency trading engines to cloud-native apps.",
+
+    experience: `
+        <span class='accent'>1. Orange Blossom Alliance</span> - Full Stack Lead (PHP/Stripe)<br>
+        <span class='accent'>2. Correlation One</span> - InfoSec Fellow (SecOps/GRC)<br>
+        <span class='accent'>3. AlgoDelta</span> - Junior Developer (FinTech)<br>
+        <span class='accent'>4. RK University</span> - Frontend Developer<br>
+        <br>Type <span class='cmd-highlight'>'open experience'</span> to scroll to details.
+    `,
+
+    projects: `
+        <span class='accent'>1. AlgoDelta Copy Trading</span> [Django/React/Redis]<br>
+        <span class='accent'>2. Orange Blossom Store</span> [PHP/Stripe Webhooks]<br>
+        <span class='accent'>3. Smart City IoT Grid</span> [C++/ESP32/Firebase]<br>
+        <span class='accent'>4. DocuVault Ecosystem</span> [React Native/Encryption]<br>
+        <br>Type <span class='cmd-highlight'>'open projects'</span> to view the architecture.
+    `,
+
+    skills: `
+        <span class='accent'>Frontend-Backend:</span> React.js & Redux, Node.js (Express), Python & Django, RESTful API Design, Java & C++, C# (.NET Core)<br><br>
+        <span class='accent'>Cybersecurity:</span> Vulnerability Scanning, Network Security & Protocols, Threat Analysis & Mitigation, DevSecOps, Security as Code<br><br>
+        <span class='accent'>Cloud & Devops:</span> AWS (EC2, S3, IAM), Docker & Containerization, CI/CD & Security as Code, Terraform<br><br>
+        <span class='accent'>Database & Data Analytics:</span> PostgreSQL & MongoDB, Firebase, Pandas & NumPy, Data Visualization<br><br>
+        <span class='accent'>Tools & Platforms:</span> Linux Administration, Unity, Git & GitHub Actions, Stripe API Integration, Postman, Jira<br><br>
+    `,
+
+    education: "1. Conestoga College (Cloud Data Management)<br>2. RK University (B.Tech Computer Engineering)",
+    contact: "Email: harshved3@gmail.com<br>GitHub: github.com/harshved<br>LinkedIn: linkedin.com/in/harshved10<br>Type <span class='cmd-highlight'>'open contact'</span> to send a message.",
+    
+    date: new Date().toString(),
+    whoami: "<span class='accent'>root@harshved-portfolio:~#</span> You are the visitor. Welcome to the system.",
+    sudo: "<span style='color: #ef4444;'>Permission denied:</span> You do not have root access to this portfolio. Nice try.",
+    gui: "Switching to Graphical User Interface...",
+    clear: "CLEAR_c" // flag to clear screen
+};
+
+function handleCommand(cmd) {
+    const output = document.getElementById('terminal-output');
+    const lowerCmd = cmd.toLowerCase().trim();
+
+    // Create the "User Input" line
+    const commandLine = document.createElement('div');
+    commandLine.innerHTML = `<span class='prompt'>visitor@harsh-os:~$</span> ${cmd}`;
+    output.appendChild(commandLine);
+
+    // 1. Handle "Clear" separately
+    if (lowerCmd === 'clear') {
+        output.innerHTML = '';
+        return;
     }
+
+    // 2. Handle "Open" commands (Scrolls to section)
+    if (lowerCmd.startsWith('open ')) {
+        const section = lowerCmd.split(' ')[1];
+        const el = document.getElementById(section);
+        if (el) {
+            const resp = document.createElement('div');
+            resp.innerHTML = `> Navigating to sector: [${section.toUpperCase()}]...`;
+            resp.style.color = "var(--accent)";
+            output.appendChild(resp);
+            
+            // Smooth scroll to the section
+            setTimeout(() => {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }, 500);
+        } else {
+            const err = document.createElement('div');
+            err.innerHTML = `> Error: Sector '${section}' not found.`;
+            err.style.color = "#ef4444";
+            output.appendChild(err);
+        }
+        return; // Stop here
+    }
+
+    // Handle Standard Commands
+    if (commands[lowerCmd]) {
+        const response = document.createElement('div');
+        response.classList.add('response'); // Add CSS class for styling
+        response.innerHTML = commands[lowerCmd];
+        output.appendChild(response);
+    } 
+    // Handle Unknown Commands
+    else if (cmd !== "") {
+        const error = document.createElement('div');
+        error.style.color = '#ef4444'; // Red error
+        error.innerHTML = `Command not found: ${cmd}. Type <span class='accent'>'help'</span> for list.`;
+        output.appendChild(error);
+    }
+
+    // Auto-scroll to bottom of terminal
+    output.scrollTop = output.scrollHeight;
 }
 
 startBootSequence();
