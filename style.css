@@ -687,6 +687,13 @@ nav {
     margin-left: 10px;
 }
 
+#close-terminal {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+}
+
 /* Mobile Response */
 @media (max-width: 768px) {
     .nav-links {
