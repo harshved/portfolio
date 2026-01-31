@@ -22,13 +22,13 @@
   },
   "experience": [
     {
-      "role": "Full Stack Developer (Lead)",
+      "role": "Full Stack Developer",
       "company": "Orange Blossom Alliance",
       "dates": "Oct 2025 - Dec 2025",
       "description": "I served as the lead developer for a custom e-commerce platform, overseeing the entire stack from database design to the user interface. My main focus was building a robust payment system using Stripe webhooks to handle real-time transactions securely. I also designed a normalized SQL schema to manage complex B2B inventory data, ensuring fast query performance as the catalog grew. By implementing a reactive frontend, I improved the user experience, making product discovery and checkout seamless. This project sharpened my ability to deliver a production-ready system under tight deadlines."
     },
     {
-      "role": "Information Security Analyst Fellow (Honors Distinction)",
+      "role": "Information Security Analyst (Honors Distinction)",
       "company": "Correlation One",
       "dates": "Apr 2025 - Sept 2025",
       "description": "Completed a competitive 25-week fellowship focused on Enterprise Security Operations, I engaged in a rigorous, case-based curriculum designed to solve actual business problems rather than just covering theory. I utilized industry-standard frameworks to detect Indicators of Compromise (IOCs) and executed Incident Response playbooks to neutralize simulated threat actors efficiently. My training extended to security architecture, where I designed defense-in-depth strategies involving Identity Access Management (IAM) and data protection protocols. Additionally, I aligned technical security controls with broader business objectives using Governance, Risk, and Compliance (GRC) frameworks to minimize organizational liability."
@@ -49,14 +49,14 @@
   "education": [
     {
       "id": "edu1",
-      "degree": "Post-Grad Diploma, Cloud Data Management",
+      "degree": "PostGraduation in Cloud Data Management",
       "school": "Conestoga College",
       "date": "Sept 2023 - Dec 2024",
       "description": "A high-intensity program focused on Enterprise Architecture and IT Governance. I specialized in bridging the gap between business requirements and technical implementation. I gained advanced proficiency in Cloud Solutions Administration, designing scalable infrastructure that aligns with IT Service Management (ITIL) standards. The program culminated in a rigorous Capstone project where I architected a compliant Enterprise Content Management system from scratch, integrating strict user access controls, data flow automation, and secure cloud storage protocols."
     },
     {
       "id": "edu2",
-      "degree": "Bachelor of Technology, Computer Engineering",
+      "degree": "Bachelor of Technology, Computer Science",
       "school": "RK University",
       "date": "July 2019 - May 2023",
       "description": "A comprehensive 4-year engineering degree rooted in the fundamentals of Computer Science and SDLC. The curriculum was heavily integrated with industry standards, featuring direct coursework partnerships with IBM and CISCO. My final year was dedicated entirely to an Industrial Project, where I transitioned from classroom theory to professional software delivery within an IT firm. I mastered core competencies in Algorithms, System Software, and Big Data Analytics, conducting research that I presented at national-level technical symposiums."
