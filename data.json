@@ -14,7 +14,7 @@
     "text": "I am currently exploring Full-Time Engineering roles and specialized Freelance contracts. If you need a secure, scalable architecture, let's talk."
   },
   "skills": {
-    "Frontend_& Backend": ["React.js & Redux", "Node.js (Express)", "Python & Django", "RESTful API Design", "Java & C++", "C# (.NET Core)"],
+    "Frontend_& Backend": ["React.js & Redux", "Node.js (Express)", "Python & Django", "C# (.NET)", "RESTful API Design", "Java & C++"],
     "Cybersecurity": ["Vulnerability Scanning", "Network Security & Protocols", "Threat Analysis & Mitigation", "DevSecOps", "Security as Code"],
     "Cloud_& Devops": ["AWS (EC2, S3, IAM)", "Docker & Containerization", "CI/CD & Security as Code", "Terraform"],
     "Database_& Data Analytics": ["PostgreSQL & MongoDB", "Firebase", "Pandas & NumPy", "Data Visualization"],
@@ -35,7 +35,7 @@
     },
     {
       "role": "Jr. Software Developer",
-      "company": "Algodelta",
+      "company": "AlgoDelta",
       "dates": "Jun 2022 - May 2023",
       "description": "I contributed to the development of India's leading algorithmic trading platform, specifically focusing on the high-performance Copy Trading engine. My work involved optimizing the low-latency execution logic required to replicate trades instantly across Master and Child accounts, ensuring minimal slippage for users managing multiple Demat profiles. The backend systems I assisted in building now power the trading infrastructure for over six major financial organizations and execute more than 250 automated strategies daily. By helping design a scalable architecture capable of handling high-volume traffic, I supported a platform that serves over 100 enterprise clients with robust, error-free automation."
     },
@@ -43,7 +43,7 @@
       "role": "Frontend Developer",
       "company": "RK University",
       "dates": "April 2021 - May 2022",
-      "description": "I engineered responsive, high-traffic web interfaces for major educational and wellness ventures, utilizing HTML, CSS, JavaScript and PHP to ensure seamless cross-device compatibility. I played a key role in developing critical platforms like the RKU Admissions portal and The Northstar School website, which collectively serve thousands of students and applicants daily. Beyond the education sector, I contributed to the digital presence of Raga Svara, a luxury wellness venture, by implementing complex layouts and an integrated online booking system. Throughout these projects, I collaborated closely with UI/UX designers to translate conceptual wireframes into pixel-perfect code while employing Git for rigorous version control and efficient team workflow."
+      "description": "I engineered responsive, high-traffic web interfaces for major educational and wellness ventures, utilizing HTML, CSS, JavaScript and PHP to ensure seamless cross-device compatibility. I played a key role in developing critical platforms like the RKU Admissions portal and The Northstar School website, which collectively serve thousands of students and applicants daily. I built backend modules for the NorthStar student platform using ASP.NET, ensuring secure, high-performance data access for end users. Beyond the education sector, I contributed to the digital presence of Raga Svara, a luxury wellness venture, by implementing complex layouts and an integrated online booking system. Throughout these projects, I collaborated closely with UI/UX designers to translate conceptual wireframes into pixel-perfect code while employing Git for rigorous version control and efficient team workflow."
     }
   ],
   "education": [
