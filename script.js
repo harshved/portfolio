@@ -90,7 +90,7 @@ function renderWebsite(data) {
     }
 
     // -- SKILLS (Chips) --
-    let skillsHTML = `<section id="skills"><h2>Skils</h2><div class="skills-grid">`;
+    let skillsHTML = `<section id="skills"><h2>Skills</h2><div class="skills-grid">`;
     for (const [category, skills] of Object.entries(data.skills)) {
         skillsHTML += `
             <div class="skill-card">
