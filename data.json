@@ -4,14 +4,14 @@
   },
   "header": {
     "fullName": "Harsh Ved",
-    "status": "🟢 Open to Freelancing Work",
+    "status": "🟢 Open to Work (Full-Time / Contract)",
     "tagline": "Full Stack Developer | Cybersecurity Analyst | Cloud Architect",
     "bio": "I am a Full Stack Developer who combines strong architectural skills with a dedicated focus on cybersecurity and cloud infrastructure. With experience in both high-speed financial trading systems and modern e-commerce platforms, I focus on writing clean, production-ready code. I bring a security-first approach to development, ensuring that scalability and performance are built in from day one. "
   },
   "freelance": {
     "available": true,
     "title": "Open to Opportunities",
-    "text": "I am currently exploring specialized Freelance contracts. If you need a secure, scalable architecture, let's talk."
+    "text": "I am currently exploring Full-Time Engineering roles and specialized Freelance contracts. If you need a secure, scalable architecture, let's talk."
   },
   "skills": {
     "Frontend_& Backend": ["React.js & Redux", "Node.js (Express)", "Python & Django", "C# (.NET)", "RESTful API Design", "Java & C++"],
