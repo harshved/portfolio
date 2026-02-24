@@ -24,7 +24,7 @@
     {
       "role": "Full Stack Developer",
       "company": "Orange Blossom Alliance",
-      "dates": "Oct 2025 - Dec 2025",
+      "dates": "Oct 2025 - Present",
       "description": "I served as the lead developer for a custom e-commerce platform, overseeing the entire stack from database design to the user interface. My main focus was building a robust payment system using Stripe webhooks to handle real-time transactions securely. I also designed a normalized SQL schema to manage complex B2B inventory data, ensuring fast query performance as the catalog grew. By implementing a reactive frontend, I improved the user experience, making product discovery and checkout seamless. This project sharpened my ability to deliver a production-ready system under tight deadlines."
     },
     {
