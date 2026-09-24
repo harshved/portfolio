@@ -1,48 +1,104 @@
 {
-  "config": {
-    "accentColor": "#22c55e"
-  },
   "header": {
     "fullName": "Harsh Ved",
-    "status": "🟢 Open to Work (Full-Time / Contract)",
+    "status": "Open to Work ~ Full-Time & Contract",
     "tagline": "Full Stack Developer | Cybersecurity Analyst | Cloud Architect",
-    "bio": "I am a Full Stack Developer who combines strong architectural skills with a dedicated focus on cybersecurity and cloud infrastructure. With experience in both high-speed financial trading systems and modern e-commerce platforms, I focus on writing clean, production-ready code. I bring a security-first approach to development, ensuring that scalability and performance are built in from day one. "
+    "headline": ["I build *secure*,", "scalable software", "that ships."],
+    "intro": "Full stack developer with a security-first mindset. From high-speed trading engines to custom e-commerce, I design, build and harden products that are ready for real users on day one.",
+    "bio": "I am a Full Stack Developer who combines strong architectural skills with a dedicated focus on cybersecurity and cloud infrastructure. With experience in both high-speed financial trading systems and modern e-commerce platforms, I focus on writing clean, production-ready code. I bring a security-first approach to development, ensuring that scalability and performance are built in from day one."
+  },
+  "stats": [
+    { "value": 250, "suffix": "+", "label": "Automated trading strategies executed daily on systems I helped build" },
+    { "value": 100, "suffix": "+", "label": "Enterprise clients served by platforms I worked on" },
+    { "value": 25, "suffix": "+", "label": "Brokerage APIs integrated into one copy-trading engine" },
+    { "value": 3, "suffix": "+", "label": "Years of professional, production experience" }
+  ],
+  "about": {
+    "facts": [
+      { "icon": "fas fa-location-dot", "label": "Based in", "value": "Ontario, Canada" },
+      { "icon": "fas fa-briefcase", "label": "Industries", "value": "Fintech · E-commerce · EdTech · Security" },
+      { "icon": "fas fa-graduation-cap", "label": "Education", "value": "PG Cloud Data Mgmt · B.Tech Computer Science" },
+      { "icon": "fas fa-handshake", "label": "Engagements", "value": "Full-time · Contract · Freelance" }
+    ]
   },
   "freelance": {
     "available": true,
     "title": "Open to Opportunities",
     "text": "I am currently exploring Full-Time Engineering roles and specialized Freelance contracts. If you need a secure, scalable architecture, let's talk."
   },
-  "skills": {
-    "Frontend_& Backend": ["React.js & Redux", "Node.js (Express)", "Python & Django", "C# (.NET)", "RESTful API Design", "Java & C++"],
-    "Cybersecurity": ["Vulnerability Scanning", "Network Security & Protocols", "Threat Analysis & Mitigation", "DevSecOps", "Security as Code"],
-    "Cloud_& Devops": ["AWS (EC2, S3, IAM)", "Docker & Containerization", "CI/CD & Security as Code", "Terraform"],
-    "Database_& Data Analytics": ["PostgreSQL & MongoDB", "Firebase", "Pandas & NumPy", "Data Visualization"],
-    "Tools_and Platforms": ["Linux Administration", "Unity", "Git & GitHub Actions", "Stripe API Integration", "Postman", "Jira"]
-  },
+  "services": [
+    {
+      "icon": "fas fa-layer-group",
+      "title": "Full-Stack Web Apps",
+      "text": "Custom dashboards, SaaS platforms and portals built with React, Node, Django and .NET, from database schema to the last pixel.",
+      "tags": ["React", "Django", "Node", ".NET"]
+    },
+    {
+      "icon": "fas fa-cart-shopping",
+      "title": "E-commerce & Payments",
+      "text": "Fast, lightweight storefronts with Stripe webhooks, tax and shipping logic, without monthly platform fees or CMS bloat.",
+      "tags": ["Stripe", "PHP", "MySQL"]
+    },
+    {
+      "icon": "fas fa-shield-halved",
+      "title": "Security Reviews & Hardening",
+      "text": "Vulnerability scanning, threat analysis, IAM and DevSecOps pipelines so your product is secure by default, not by accident.",
+      "tags": ["DevSecOps", "IAM", "GRC"]
+    },
+    {
+      "icon": "fas fa-cloud",
+      "title": "Cloud & DevOps",
+      "text": "AWS infrastructure, Docker, Terraform and CI/CD that scales with your traffic and stays predictable on the bill.",
+      "tags": ["AWS", "Docker", "Terraform"]
+    },
+    {
+      "icon": "fas fa-bolt",
+      "title": "Real-time & Fintech Systems",
+      "text": "Low-latency, WebSocket-driven systems like trade replication engines and live P&L dashboards that never need a refresh.",
+      "tags": ["WebSockets", "PostgreSQL", "Python"]
+    },
+    {
+      "icon": "fas fa-microchip",
+      "title": "IoT & Data Dashboards",
+      "text": "Sensor-to-cloud pipelines with ESP32 and Firebase, live React dashboards, and Pandas-powered analysis on top.",
+      "tags": ["ESP32", "Firebase", "Pandas"]
+    }
+  ],
+  "marquee": ["React", "Node.js", "Python", "Django", "C# / .NET", "React Native", "PostgreSQL", "MongoDB", "AWS", "Docker", "Terraform", "Stripe", "Firebase", "WebSockets", "Linux", "GitHub Actions"],
+  "skills": [
+    { "title": "Frontend & Backend", "icon": "fas fa-code", "items": ["React.js & Redux", "Node.js (Express)", "Python & Django", "C# (.NET)", "RESTful API Design", "Java & C++"] },
+    { "title": "Cybersecurity", "icon": "fas fa-user-shield", "items": ["Vulnerability Scanning", "Network Security & Protocols", "Threat Analysis & Mitigation", "DevSecOps", "Security as Code"] },
+    { "title": "Cloud & DevOps", "icon": "fas fa-server", "items": ["AWS (EC2, S3, IAM)", "Docker & Containerization", "CI/CD & Security as Code", "Terraform"] },
+    { "title": "Database & Data Analytics", "icon": "fas fa-database", "items": ["PostgreSQL & MongoDB", "Firebase", "Pandas & NumPy", "Data Visualization"] },
+    { "title": "Tools & Platforms", "icon": "fas fa-toolbox", "items": ["Linux Administration", "Unity", "Git & GitHub Actions", "Stripe API Integration", "Postman", "Jira"] }
+  ],
   "experience": [
     {
       "role": "Full Stack Developer",
       "company": "Orange Blossom Alliance",
       "dates": "Oct 2025 - Present",
+      "tags": ["PHP", "MySQL", "Stripe Webhooks", "JavaScript"],
       "description": "I served as the lead developer for a custom e-commerce platform, overseeing the entire stack from database design to the user interface. My main focus was building a robust payment system using Stripe webhooks to handle real-time transactions securely. I also designed a normalized SQL schema to manage complex B2B inventory data, ensuring fast query performance as the catalog grew. By implementing a reactive frontend, I improved the user experience, making product discovery and checkout seamless. This project sharpened my ability to deliver a production-ready system under tight deadlines."
     },
     {
       "role": "Information Security Analyst (Honors Distinction)",
       "company": "Correlation One",
       "dates": "Apr 2025 - Sept 2025",
+      "tags": ["SecOps", "Incident Response", "IAM", "GRC"],
       "description": "Completed a competitive 25-week fellowship focused on Enterprise Security Operations, I engaged in a rigorous, case-based curriculum designed to solve actual business problems rather than just covering theory. I utilized industry-standard frameworks to detect Indicators of Compromise (IOCs) and executed Incident Response playbooks to neutralize simulated threat actors efficiently. My training extended to security architecture, where I designed defense-in-depth strategies involving Identity Access Management (IAM) and data protection protocols. Additionally, I aligned technical security controls with broader business objectives using Governance, Risk, and Compliance (GRC) frameworks to minimize organizational liability."
     },
     {
       "role": "Jr. Software Developer",
       "company": "AlgoDelta",
       "dates": "Jun 2022 - May 2023",
+      "tags": ["Python", "Django", "React", "PostgreSQL"],
       "description": "I contributed to the development of India's leading algorithmic trading platform, specifically focusing on the high-performance Copy Trading engine. My work involved optimizing the low-latency execution logic required to replicate trades instantly across Master and Child accounts, ensuring minimal slippage for users managing multiple Demat profiles. The backend systems I assisted in building now power the trading infrastructure for over six major financial organizations and execute more than 250 automated strategies daily. By helping design a scalable architecture capable of handling high-volume traffic, I supported a platform that serves over 100 enterprise clients with robust, error-free automation."
     },
     {
       "role": "Frontend Developer",
       "company": "RK University",
       "dates": "April 2021 - May 2022",
+      "tags": ["HTML/CSS", "JavaScript", "PHP", "ASP.NET"],
       "description": "I engineered responsive, high-traffic web interfaces for major educational and wellness ventures, utilizing HTML, CSS, JavaScript and PHP to ensure seamless cross-device compatibility. I played a key role in developing critical platforms like the RKU Admissions portal and The Northstar School website, which collectively serve thousands of students and applicants daily. I built backend modules for the NorthStar student platform using ASP.NET, ensuring secure, high-performance data access for end users. Beyond the education sector, I contributed to the digital presence of Raga Svara, a luxury wellness venture, by implementing complex layouts and an integrated online booking system. Throughout these projects, I collaborated closely with UI/UX designers to translate conceptual wireframes into pixel-perfect code while employing Git for rigorous version control and efficient team workflow."
     }
   ],
@@ -65,31 +121,55 @@
   "projects": [
     {
       "title": "DocuVault Ecosystem",
+      "category": "SaaS · Web + Mobile",
+      "icon": "fas fa-file-shield",
+      "hue": 160,
       "techStack": ["React.js", "React Native", "Python (Django)", "AES-256 Encryption"],
+      "highlights": ["AES-256 encrypted document storage", "Multi-tenant business profiles", "Instant mobile notifications to view or sign"],
       "summary": "A cross-platform document management SaaS connecting web dashboards to mobile clients.",
-      "details": "I developed this ecosystem to solve the mess of manual document exchange between professionals and their clients. It is a dual-platform SaaS that pairs a React.js web dashboard for organizations with a React Native mobile app for end-users. The goal was to make file sharing instant and secure, so I helped build a Python Django backend that handles the heavy lifting—storage, user management, and 256-bit encryption. On the frontend, I designed the workflow so that as soon as an admin uploads a file, the client gets a mobile notification to view or sign it immediately. It supports multi-tenancy as well, meaning a single user can easily switch between different business profiles without logging in and out."
+      "details": "I developed this ecosystem to solve the mess of manual document exchange between professionals and their clients. It is a dual-platform SaaS that pairs a React.js web dashboard for organizations with a React Native mobile app for end-users. The goal was to make file sharing instant and secure, so I helped build a Python Django backend that handles the heavy lifting-storage, user management, and 256-bit encryption. On the frontend, I designed the workflow so that as soon as an admin uploads a file, the client gets a mobile notification to view or sign it immediately. It supports multi-tenancy as well, meaning a single user can easily switch between different business profiles without logging in and out."
     },
     {
       "title": "AlgoDelta Copy Trading",
+      "category": "Fintech · Real-time",
+      "icon": "fas fa-chart-line",
+      "hue": 205,
       "techStack": ["React.js", "Python (Django)", "PostgreSQL", "WebSockets"],
+      "highlights": ["25+ brokerage APIs unified", "Backbone for 13+ financial organizations", "Live P&L without page reloads"],
       "summary": "High-frequency trade replication engine integrating 25+ brokerage APIs.",
       "details": "I contributed to the core engineering of India's premier Copy Trading solution, which enables the instant replication of trades from a Master account to thousands of Child accounts. Built on a robust Python Django architecture, the system handles the complex 'Master-Child' logic across over 25 different broker APIs, ensuring low-latency execution regardless of the platform. On the frontend, I utilized React.js to construct the 'Smart Dashboard,' a real-time command center that syncs Live P&L and open positions without requiring page reloads. This platform is currently the backbone for 13+ financial organizations, processing automated strategies with enterprise-grade security and precision."
     },
     {
       "title": "IoT Based Smart Garbage Monitoring System",
+      "category": "IoT · Smart City",
+      "icon": "fas fa-microchip",
+      "hue": 95,
       "techStack": ["C++ (Embedded)", "React.js", "Firebase", "ESP32 Hardware"],
+      "highlights": ["Smart India Hackathon finalist", "Real-time fill-level telemetry", "Contactless, sensor-driven lid"],
       "summary": "Smart India Hackathon Finalist: A real-time waste logistics network.",
       "details": "I developed this end-to-end IoT solution as a finalist entry for the Smart India Hackathon to modernize municipal waste logistics. The core system uses ESP32 microcontrollers with ultrasonic sensors to track garbage levels in real-time, which I programmed using C++ to transmit data instantly to a Firebase cloud backend. This live data feeds into a React.js dashboard allowing city officials to monitor bin status (Green/Orange/Red) and deploy trucks only when necessary, effectively cutting down manual inspections. I also engineered a hardware automation feature using servo motors that automatically opens the bin lid when a user approaches, ensuring a completely contactless and hygienic experience."
     },
     {
       "title": "Orange Blossom Storefront",
+      "category": "E-commerce · Payments",
+      "icon": "fas fa-bag-shopping",
+      "hue": 28,
       "techStack": ["PHP 8+", "MySQL", "Stripe Webhooks", "Shopify API"],
+      "highlights": ["Webhook-verified Stripe payments", "Automatic Ontario tax & shipping rules", "No CMS bloat or monthly platform fees"],
       "summary": "A lightweight, custom e-commerce engine built without CMS bloat.",
       "details": "I built this because the client needed a fast online shop but didn't want the heavy monthly costs of Shopify or the mess of WordPress. I used simple PHP and JavaScript to make a custom shopping cart. The biggest challenge was payments, I didn't want orders to get lost if a customer closed their browser too fast. So, I set up a 'Webhook' listener that talks directly to Stripe in the background to confirm every payment 100%. I also wrote the backend logic to handle all the tricky math, automatically calculating Ontario tax and shipping rules based on where the customer lives."
-    }    
+    }
+  ],
+  "process": [
+    { "title": "Discover", "icon": "fas fa-magnifying-glass", "text": "We talk goals, users and constraints. You get a clear scope, timeline and estimate - no surprises." },
+    { "title": "Architect", "icon": "fas fa-diagram-project", "text": "Data model, security model and stack choices planned up front, so the product scales without rewrites." },
+    { "title": "Build", "icon": "fas fa-code-branch", "text": "Iterative sprints with regular demos. Clean, documented, version-controlled code you actually own." },
+    { "title": "Secure & Ship", "icon": "fas fa-rocket", "text": "Testing, hardening, CI/CD and deployment, followed by a proper handover and ongoing support." }
   ],
   "contact": {
     "email": "harshved3@gmail.com",
+    "location": "Ontario, Canada",
+    "timezone": "America/Toronto",
     "social": [
       { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/harshved10", "icon": "fab fa-linkedin" },
       { "platform": "GitHub", "url": "https://github.com/harshved", "icon": "fab fa-github" },

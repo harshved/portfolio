@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-	<meta name="author" content="Harsh Ved" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harsh Ved | Developer</title>
+    <meta name="author" content="Harsh Ved" />
+    <title>Harsh Ved | Full Stack Developer & Security-Minded Freelancer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="theme-color" content="#07090d" />
 
     <meta
       name="description"
@@ -15,19 +16,15 @@
       name="keywords"
       content="Harsh Ved, Software Developer, Full Stack, Web Developer, Portfolio, React, Python, Freelance, Ontario, System Architect, Canada, Indian, India, Software"
     />
-    
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://harshved.github.io/portfolio/" />
     <meta property="og:title" content="Harsh Ved | Full Stack Developer | Information Security Analyst | Cloud Architect" />
     <meta
       property="og:description"
-      content="Enter the system. View my projects in Full Stack Development, Data Security, and Python Automation."
+      content="Secure, scalable software built to ship. View my projects in Full Stack Development, Data Security, and Cloud."
     />
-
-    <meta
-      property="og:image"
-      content="https://harshved.github.io/portfolio/favicon.ico"
-    />
+    <meta property="og:image" content="https://harshved.github.io/portfolio/favicon.ico" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Harsh Ved | Full Stack Developer | Information Security Analyst | Cloud Architect" />
@@ -35,101 +32,165 @@
       name="twitter:description"
       content="Full Stack Developer available for hire. Specializing in secure systems and data logic."
     />
-    <meta
-      name="twitter:image"
-      content="https://harshved.github.io/portfolio/favicon.ico"
-    />
+    <meta name="twitter:image" content="https://harshved.github.io/portfolio/favicon.ico" />
 
+    <!-- Apply saved / system theme before first paint to avoid a flash -->
+    <script>
+      (function () {
+        var t;
+        try { t = localStorage.getItem("hv-theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+        if (t === "light") {
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f6f7f4");
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7MN4JLJXW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-M7MN4JLJXW");
+    </script>
   </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-M7MN4JLJXW"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+  <body class="is-loading">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    gtag("config", "G-M7MN4JLJXW");
-  </script>
-  <body>
-    <div id="preloader">
-      <div class="terminal-loader">
-        <div id="boot-text"></div>
-        <div class="cursor-blink">_</div>
+    <!-- PRELOADER -->
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-logo">HV<span>.</span></div>
+        <div class="preloader-line" id="boot-text">&gt; Initializing HV-OS kernel</div>
+        <div class="preloader-bar"><span id="boot-bar"></span></div>
+        <div class="preloader-count" id="boot-count">0%</div>
       </div>
     </div>
-    <canvas id="network-canvas"></canvas>
 
-    <nav>
-      <div class="logo">HV<span class="blink">_</span></div>
+    <!-- AMBIENT BACKGROUND -->
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-blobs" aria-hidden="true"><span></span><span></span></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-      <ul class="nav-links">
-        <li><a href="#about">// ABOUT</a></li>
-        <li><a href="#skills">// SKILLS</a></li>
-        <li><a href="#experience">// WORK</a></li>
-        <li><a href="#education">// EDU</a></li>
-        <li><a href="#projects">// PROJECTS</a></li>
-        <li><a href="#contact">// CONTACT</a></li>
-      </ul>
+    <!-- NAV -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="#top" class="logo" aria-label="Harsh Ved, back to top">
+          <span class="logo-mark">HV</span>
+          <span class="logo-text">Harsh Ved</span>
+        </a>
 
-      <div class="nav-right">
-        <button id="open-terminal" class="terminal-btn">
-          <i class="fas fa-terminal"></i> CMD
-        </button>
-        <button id="hamburger-btn" class="hamburger">
-          <i class="fas fa-bars"></i>
-        </button>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#projects">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="open-terminal" class="icon-btn" type="button" aria-label="Open terminal" title="Terminal (Ctrl + K)">
+            <i class="fas fa-terminal"></i>
+          </button>
+          <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire me</a>
+          <button id="hamburger-btn" class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
+          </button>
+        </div>
       </div>
-    </nav>
+      <div class="scroll-progress" id="scroll-progress"></div>
+    </header>
 
-    <div id="mobile-menu" class="mobile-menu hidden">
-      <a href="#about" onclick="toggleMobileMenu()">// ABOUT</a>
-      <a href="#skills" onclick="toggleMobileMenu()">// SKILLS</a>
-      <a href="#experience" onclick="toggleMobileMenu()">// WORK</a>
-      <a href="#education" onclick="toggleMobileMenu()">// EDU</a>
-      <a href="#projects" onclick="toggleMobileMenu()">// PROJECTS</a>
-      <a href="#contact" onclick="toggleMobileMenu()">// CONTACT</a>
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile">
+        <a href="#services"><span>01</span>Services</a>
+        <a href="#projects"><span>02</span>Work</a>
+        <a href="#experience"><span>03</span>Experience</a>
+        <a href="#skills"><span>04</span>Skills</a>
+        <a href="#education"><span>05</span>Education</a>
+        <a href="#contact"><span>06</span>Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Start a project <i class="fas fa-arrow-right"></i></a>
     </div>
 
-    <main id="app"></main>
+    <main id="main">
+      <div id="app"></div>
+    </main>
 
-    <footer>
-      <p>
-        System Status: <span style="color: var(--accent)">Operational</span> |
-        &copy; Harsh Ved <span id="year"></span>
-      </p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#top" class="logo"><span class="logo-mark">HV</span><span class="logo-text">Harsh Ved</span></a>
+          <p>Secure, scalable software, built to ship.</p>
+        </div>
+        <div class="footer-meta">
+          <p><span class="pulse-dot"></span> System status: <strong>Operational</strong></p>
+          <p>&copy; <span id="year"></span> Harsh Ved. Hand-built with care.</p>
+          <p class="footer-hint">Psst, press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the terminal.</p>
+        </div>
+        <a href="#top" class="icon-btn back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
     </footer>
 
-    <div id="terminal-overlay" class="hidden">
-      <div class="terminal-window">
+    <!-- PROJECT MODAL -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-panel">
+        <button class="icon-btn modal-close" type="button" data-close aria-label="Close case study">
+          <i class="fas fa-xmark"></i>
+        </button>
+        <div id="modal-content"></div>
+        <div class="modal-nav">
+          <button id="modal-prev" class="btn btn-ghost btn-sm" type="button"><i class="fas fa-arrow-left"></i> Previous</button>
+          <button id="modal-next" class="btn btn-ghost btn-sm" type="button">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMINAL -->
+    <div id="terminal-overlay" class="terminal-overlay" aria-hidden="true">
+      <div class="terminal-window" role="dialog" aria-modal="true" aria-label="Portfolio terminal">
         <div class="terminal-header">
-          <span>harsh@system:~</span>
-          <button id="close-terminal">X</button>
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="terminal-title">visitor@harsh-os: ~</span>
+          <button id="close-terminal" type="button" aria-label="Close terminal"><i class="fas fa-xmark"></i></button>
         </div>
         <div class="terminal-body" id="terminal-output">
-          <p>Welcome to HV-OS v1.0.2</p>
-          <p>Type 'help' to see available commands.</p>
+          <p>Welcome to HV-OS v2.0</p>
+          <p class="t-dim">Type <span class="t-accent">'help'</span> to see available commands. Tab autocompletes, ↑/↓ recalls history.</p>
         </div>
         <div class="terminal-input-area">
           <span class="prompt">➜ ~</span>
-          <input type="text" id="cmd-input" autocomplete="off" autofocus />
+          <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" aria-label="Terminal command" />
         </div>
       </div>
     </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
